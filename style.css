@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navbar{
+    height: 65px;
+    width: 100vw;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+.navbar .right ul li a{
+    font-family: "raleway", cursive;
+    transition: 0.3s ease-in-out color;
+}
+.navbar .left a{
+    font-family: 'poppins',sans-serif;
+    font-size: 1.7rem;
+    z-index: 99;
+}
+.navbar .right ul li a:hover{
+    color: rgb(128, 128, 128);
+}
+.top-navigation{
+    background-color: blanchedalmond;
+}
+.navbar .left .menu .bars{
+    transition: transform 0.4s ease-in-out;
+}
+@media (max-width: 620px) {
+.right{
+    overflow: hidden;
+    height: 0;
+    transition: 0.4s ease-in height;
+    width: 100%;
+    position: absolute;
+    top: 99px;
+    left: 0;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.right ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.left{
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+}
+header nav .left .menu{
+    display: block;
+}
+.navbar{
+    padding: 0 50px;
+    flex-direction: column;
+}
+.clicked .bars:nth-child(1){
+    transform: rotate(45deg) translateY(7px) translateX(5px);
+}
+.clicked .bars:nth-child(2){
+    transform: rotate(-45deg);
+}
+.clicked .bars:nth-child(3){
+    transform: rotate(45deg) translateY(-4px) translateX(-6px);
+    z-index: 999;
+}
+}
