@@ -5,6 +5,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+.not-needed section,.not-needed footer{
+    display: none;
+}
 .top-navigation{
     padding: 3px 0;
     background-color: bisque;
@@ -34,8 +37,8 @@ header .navbar .right .cart:hover{
 }
 .menu .bars{
     height: 2px;
-    width: 30px;
-    margin: 5px 0;
+    width: 35px;
+    margin: 6px 0;
     background-color: black;
     transition: 0.3s ease-in-out transform;
 }
@@ -51,15 +54,20 @@ header .navbar .right .cart:hover{
         justify-content: center;
         transition: 0.4s ease-in-out height;
         position: absolute;
-        top: 65px;
+        top: 90px;
+        left: 0;
+        color: white;
+    }
+    header .navbar .left .cart img{
+        width: 30px;
+        height: 30px;
     }
     header .navbar .right ul{
         display: flex;
         flex-direction: column;
         gap: 2rem;
-    }
-    .right-visible{
-        height: 100vh;
+        align-items: center;
+        justify-content: center;
     }
     header .navbar .left .menu{
         display: block;
@@ -80,7 +88,7 @@ header .navbar .right .cart:hover{
         transform: rotate(-45deg);
     }
     header .navbar .left .hamclicked .bars:nth-child(3){
-        transform: rotate(45deg) translateY(-3px) translateX(-5px);
+        transform: rotate(45deg) translateY(-4px) translateX(-6px);
     }
 }
 @media (max-width: 740px) {
