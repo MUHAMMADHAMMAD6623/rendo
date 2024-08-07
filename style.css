@@ -1,139 +1,100 @@
-@import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-.navbar{
-    height: 65px;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
-}
-.navbar .right ul li a{
-    display: block;
-    font-family: "raleway", cursive;
-    transition: 0.3s ease-in-out all;
-}
-.navbar .left a{
-    font-family: 'poppins',sans-serif;
-    font-size: 1.7rem;
-    z-index: 99;
-}
-.navbar .right ul li a:hover{
-    color: rgb(128, 128, 128);
-    translate: 3px;
-}
 .top-navigation{
-    background-color: blanchedalmond;
-}
-.navbar .left .menu .bars{
-    transition: transform 0.4s ease-in-out;
-}
-.hero .left-hero h2{
-    font-family: 'poppins',sans-serif;
-}
-.hero .left-hero h1{
-    font-family: 'Montserrat',sans-serif;
-    font-style: italic;
-}
-.hero .left-hero p{
-    font-family: 'Raleway', sans-serif;
-}
-.button{
-    position: relative; /* Needed for pseudo-element positioning */
-    overflow: hidden; /* Hide anything outside the button */
-    background-color: black;
-    color: white;
-    padding: 10px 40px;
-    font-family: 'poppins', sans-serif;
-    font-size: 1.4rem;
-    border: none; /* Remove default border */
-    cursor: pointer; /* Change cursor to pointer */
-}
-.button::after {
-    content: ""; /* Required for the pseudo-element */
-    position: absolute; /* Absolute positioning within the button */
-    top: 0;
-    left: 0;
-    height: 100%; /* Full height of the button */
-    width: 0; /* Start with zero width */
-    background-color: rgb(51, 51, 51); /* Background color on hover */
-    transition: width 0.3s ease-in-out; /* Transition effect */
-    z-index: 1; /* Ensure it's above the button text */
-}
-
-.button:hover::after {
-    width: 100%; /* Expand to full width on hover */
-}
-.button span {
-    position: relative; /* Text positioned above the pseudo-element */
-    z-index: 2; /* Ensure text is above the pseudo-element */
-}
-@media screen and (max-width: 620px) {
-.right{
-    overflow: hidden;
-    height: 0;
-    transition: 0.4s ease-in height;
-    width: 100%;
-    position: absolute;
-    top: 99px;
-    left: 0;
-    background-color: black;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 9999;
-}
-.right ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-.left{
-    height: 100%;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 35px;
-}
-header nav .left .menu{
-    display: block;
+    padding: 3px 0;
+    background-color: bisque;
+    font-size: 0.8rem;
 }
 .navbar{
-    padding: 0 50px;
-    flex-direction: column;
+    padding: 0 100px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
-.clicked .bars:nth-child(1){
-    transform: rotate(45deg) translateY(7px) translateX(5px);
+.logo{
+    font-family: 'poppins',sans-serif;
+    font-size: 1.8rem;
 }
-.clicked .bars:nth-child(2){
-    transform: rotate(-45deg);
+header .navbar .right ul a li{
+    font-family: 'raleway',sans-serif;
+    font-weight: 500;
+    transition: transform 0.3s ease-in-out;
 }
-.clicked .bars:nth-child(3){
-    transform: rotate(45deg) translateY(-4px) translateX(-6px);
-    z-index: 999;
+header .navbar .right ul a li:hover{
+    transform: translateX(-4px);
 }
-.hero .left-hero{
-    width: 100%;
+header .navbar .right .cart{
+    transition: 0.3s ease-in-out scale;
 }
+header .navbar .right .cart:hover{
+    scale: 1.1;
 }
-@media screen and (max-width: 480px) {
-    .hero{
-        padding: 55px 55px;
+.menu .bars{
+    height: 2px;
+    width: 30px;
+    margin: 5px 0;
+    background-color: black;
+    transition: 0.3s ease-in-out transform;
+}
+@media (max-width: 630px) {
+    header .navbar .right{
+        height: 0px;
+        overflow: hidden;
+        background-color: black;
+        width: 100vw;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.4s ease-in-out height;
+        position: absolute;
+        top: 65px;
+    }
+    header .navbar .right ul{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+    .right-visible{
+        height: 100vh;
+    }
+    header .navbar .left .menu{
+        display: block;
+    }
+    header .navbar .left{
+        width: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    header .navbar .left .cart{
+        display: block;
+    }
+    header .navbar .left .hamclicked .bars:nth-child(1){
+        transform: rotate(45deg) translateY(7px) translateX(5px);
+    }
+    header .navbar .left .hamclicked .bars:nth-child(2){
+        transform: rotate(-45deg);
+    }
+    header .navbar .left .hamclicked .bars:nth-child(3){
+        transform: rotate(45deg) translateY(-3px) translateX(-5px);
     }
 }
-@media screen and (max-width: 405px) {
-    .hero{
-        padding: 45px 40px;
+@media (max-width: 740px) {
+    header .navbar{
+        padding: 0 70px;
     }
-    .hero .left-hero h2{
-        font-size: 1.6rem;
+}
+@media (max-width: 465px) {
+    header .navbar{
+        padding: 0 45px;
     }
-    .hero .left-hero h1{
-        font-size: 2.5rem;
+}
+@media (max-width: 380px) {
+    header .navbar{
+        padding: 0 30px;
     }
 }
