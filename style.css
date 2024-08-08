@@ -5,6 +5,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+h1,h2{
+    font-family: 'poppins',sans-serif;
+}
+p{
+    font-family: 'raleway',sans-serif;
+}
 .not-needed section,.not-needed footer{
     display: none;
 }
@@ -42,6 +48,34 @@ header .navbar .right .cart:hover{
     background-color: black;
     transition: 0.3s ease-in-out transform;
 }
+
+.hero{
+    padding: 100px 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 630px) {
     header .navbar .right{
         height: 0px;
@@ -91,18 +125,42 @@ header .navbar .right .cart:hover{
         transform: rotate(45deg) translateY(-4px) translateX(-6px);
     }
 }
+@media (max-width: 900px) {
+    .hero .right-hero{
+        display: none;
+    }
+    .hero .left-hero{
+        width: 100%;
+    }
+}
 @media (max-width: 740px) {
     header .navbar{
         padding: 0 70px;
+    }
+    .hero{
+        padding: 70px 70px;
     }
 }
 @media (max-width: 465px) {
     header .navbar{
         padding: 0 45px;
     }
+    .hero{
+        padding: 50px 45px;
+    }
+    .hero h1{
+        font-size: 2.8rem;
+    }
+    .hero h2{
+        font-size: 1.9rem;
+        top: 0px;
+    }
 }
 @media (max-width: 380px) {
     header .navbar{
         padding: 0 30px;
+    }
+    .hero{
+        padding: 35px 30px;
     }
 }
